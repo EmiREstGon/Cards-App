@@ -60,7 +60,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             val name = remember { mutableStateOf("") }
-            var surname by remember { mutableStateOf("") }
+            val surname by remember { mutableStateOf("") }
 
             CardsAppTheme() {
                 // A surface container using the 'background' color from the theme
@@ -153,17 +153,6 @@ fun CardComponent(
                         contentDescription = null
                     )
                 }
-
-                /*Image(
-                    modifier = Modifier
-                        .height(56.dp)
-                        .clickable {
-                            onClick()
-                        },
-                    painter = painterResource(id = R.drawable.baseline_navigate_next_24),
-                    contentDescription = null,
-                    contentScale = ContentScale.FillHeight,
-                )*/
             }
 
             Row(
